@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./components/Notes";
 import AddNoteButton from "./components/AddNoteButton";
-import { getNotes, addNote } from "./services/noteService";
+import { getNotes, addNote, deleteNote } from "./services/noteService";
 
 class App extends Component {
   state = {
@@ -15,8 +15,7 @@ class App extends Component {
 
   handleAddNote = () => {
     addNote();
-    const notes = getNotes();
-    this.setState({ notes });
+    this.setState({ notes: getNotes() });
   };
 
   handleEditNote = (id, text) => {
@@ -24,6 +23,11 @@ class App extends Component {
     const index = notes.findIndex(n => n.id === id);
     notes[index].text = text;
     this.setState({ notes });
+  };
+
+  handleDeleteNote = id => {
+    deleteNote(id);
+    this.setState({ notes: getNotes() });
   };
 
   render() {
@@ -37,6 +41,7 @@ class App extends Component {
           <Notes
             notes={this.state.notes}
             handleEditNote={this.handleEditNote}
+            handleDeleteNote={this.handleDeleteNote}
           />
         </main>
       </div>
