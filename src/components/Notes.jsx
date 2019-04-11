@@ -1,14 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import Note from "../components/Note";
 
-const Notes = ({ notes }) => {
-  return (
-    <div>
-      {notes.map(n => (
-        <Note title={n.title} text={n.text} />
-      ))}
-    </div>
-  );
-};
+class Notes extends Component {
+  render() {
+    const { notes, handleEditNote } = this.props;
+    return (
+      <div>
+        {notes.map(n => (
+          <Note
+            key={n.id}
+            id={n.id}
+            title={n.title}
+            text={n.text}
+            onChange={handleEditNote}
+          />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default Notes;

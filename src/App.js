@@ -19,6 +19,13 @@ class App extends Component {
     this.setState({ notes });
   };
 
+  handleEditNote = (id, text) => {
+    const notes = [...this.state.notes];
+    const index = notes.findIndex(n => n.id === id);
+    notes[index].text = text;
+    this.setState({ notes });
+  };
+
   render() {
     return (
       <div className="App">
@@ -27,7 +34,10 @@ class App extends Component {
         </header>
         <main>
           <AddNoteButton click={this.handleAddNote} />
-          <Notes notes={this.state.notes} />
+          <Notes
+            notes={this.state.notes}
+            handleEditNote={this.handleEditNote}
+          />
         </main>
       </div>
     );
