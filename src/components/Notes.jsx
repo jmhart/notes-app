@@ -3,7 +3,7 @@ import Note from "../components/Note";
 
 class Notes extends Component {
   render() {
-    const { notes, handleEditNote } = this.props;
+    const { notes, handleEditNote, handleDeleteNote } = this.props;
     return (
       <div>
         {notes.map(n => (
@@ -13,6 +13,7 @@ class Notes extends Component {
             title={n.title}
             text={n.text}
             onChange={handleEditNote}
+            handleDelete={handleDeleteNote}
           />
         ))}
       </div>

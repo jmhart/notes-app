@@ -1,6 +1,6 @@
 import React from "react";
 
-const Note = ({ id, title, text, onChange }) => {
+const Note = ({ id, title, text, onChange, handleDelete }) => {
   return (
     <div className="note">
       <div className="note-title">{title}</div>
@@ -9,8 +9,9 @@ const Note = ({ id, title, text, onChange }) => {
         value={text}
         onChange={e => onChange(id, e.currentTarget.value)}
       />
-      <button className="btn-save">Save</button>
-      <button className="btn-edit">Edit</button>
+      <button onClick={() => handleDelete(id)} className="btn-edit">
+        Delete
+      </button>
     </div>
   );
 };

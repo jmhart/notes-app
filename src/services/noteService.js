@@ -29,3 +29,8 @@ export function addNote() {
   };
   notes.push(note);
 }
+
+export function deleteNote(id) {
+  const index = notes.findIndex(n => n.id === id);
+  notes.splice(index, 1);
+}
