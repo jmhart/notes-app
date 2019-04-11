@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Notes from "./components/Notes";
 import AddNoteButton from "./components/AddNoteButton";
-import { getNotes } from "./services/noteService";
+import { getNotes, addNote } from "./services/noteService";
 
 class App extends Component {
   state = {
@@ -15,8 +15,13 @@ class App extends Component {
 
   handleAddNote = () => {
     const notes = [...this.state.notes];
-
-    console.log(notes);
+    const newNote = {
+      id: notes[notes.length - 1].id + 1,
+      title: "",
+      text: ""
+    };
+    notes.push(newNote);
+    this.setState({ notes });
   };
 
   render() {
@@ -26,7 +31,7 @@ class App extends Component {
           <h1>Notes App</h1>
         </header>
         <main>
-          <AddNoteButton />
+          <AddNoteButton click={this.handleAddNote} />
           <Notes notes={this.state.notes} />
         </main>
       </div>
