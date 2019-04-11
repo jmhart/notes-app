@@ -14,13 +14,8 @@ class App extends Component {
   }
 
   handleAddNote = () => {
-    const notes = [...this.state.notes];
-    const newNote = {
-      id: notes[notes.length - 1].id + 1,
-      title: "",
-      text: ""
-    };
-    notes.push(newNote);
+    addNote();
+    const notes = getNotes();
     this.setState({ notes });
   };
 

@@ -19,3 +19,13 @@ const notes = [
 export function getNotes() {
   return notes;
 }
+
+export function addNote() {
+  const id = notes[notes.length - 1].id + 1;
+  const note = {
+    id: id,
+    title: "",
+    text: ""
+  };
+  notes.push(note);
+}
