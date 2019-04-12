@@ -34,13 +34,14 @@ class Notes extends Component {
     const { notes } = this.state;
     return (
       <React.Fragment>
-        <AddNoteButton click={this.handleAddNote} />
-        <div>
+        <div className="btn-add">
+          <AddNoteButton click={this.handleAddNote} />
+        </div>
+        <div className="note-list">
           {notes.map(n => (
             <Note
               key={n.id}
               id={n.id}
-              title={n.title}
               text={n.text}
               onChange={this.handleEditNote}
               handleDelete={this.handleDeleteNote}
