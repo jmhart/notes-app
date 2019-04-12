@@ -9,9 +9,9 @@ const Note = ({ id, title, text, onChange, handleDelete }) => {
         value={text}
         onChange={e => onChange(id, e.currentTarget.value)}
       />
-      <button onClick={() => handleDelete(id)} className="btn-edit">
-        Delete
-      </button>
+      <div className="bnt-delete">
+        <button onClick={() => handleDelete(id)}>Delete</button>
+      </div>
     </div>
   );
 };

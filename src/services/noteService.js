@@ -21,7 +21,10 @@ export function getNotes() {
 }
 
 export function addNote() {
-  const id = notes[notes.length - 1].id + 1;
+  let id = 1;
+  if (notes.length) {
+    id = notes[notes.length - 1].id + 1;
+  }
   const note = {
     id: id,
     title: "",
