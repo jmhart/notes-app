@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-areas:
     "header header header header header header"
-    "menu main main main main main";
+    "main main main main main main";
 }
 
 header {
@@ -27,26 +27,13 @@ header h1 {
 
 main {
   margin-top: 25px;
+  padding-left: 25px;
   grid-area: main;
-}
-
-.menu {
-  grid-area: menu;
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: auto;
-  justify-items: center;
-  background-color: #333;
-  position: fixed;
-}
-
-.menu button {
-  height: 2rem;
 }
 
 .note-list {
   display: grid;
-  grid-template-areas: "note note note note note";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-items: center;
 }

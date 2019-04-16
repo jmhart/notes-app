@@ -44,7 +44,7 @@ class Notes extends Component {
     const { notes } = this.state;
     return (
       <React.Fragment>
-        <div className="btn-add">
+        <div className="menu">
           <AddButton onClick={this.handleAddNote} />
           <SaveButton onClick={this.handleSave} />
         </div>
