@@ -57,3 +57,19 @@ main {
   resize: none;
   border: none;
 }
+
+.btn-add {
+  font-family: inherit;
+  display: flex;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  padding: 15px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.btn-add-text {
+  padding-left: 15px;
+  font-size: 2em;
+}

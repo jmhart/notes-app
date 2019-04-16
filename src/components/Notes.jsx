@@ -46,7 +46,6 @@ class Notes extends Component {
       <React.Fragment>
         <div className="menu">
           <AddButton onClick={this.handleAddNote} />
-          <SaveButton onClick={this.handleSave} />
         </div>
         <div className="note-list">
           {notes.map(n => (
