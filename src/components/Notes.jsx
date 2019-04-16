@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Note from "./Note";
 import AddButton from "./AddButton";
-import SaveButton from "./SaveButton";
 import {
   getNotes,
   addNote,
