@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Note from "./Note";
-import AddNoteButton from "./AddNoteButton";
+import AddButton from "./AddButton";
 import SaveButton from "./SaveButton";
 import {
   getNotes,
@@ -45,7 +45,7 @@ class Notes extends Component {
     return (
       <React.Fragment>
         <div className="btn-add">
-          <AddNoteButton onClick={this.handleAddNote} />
+          <AddButton onClick={this.handleAddNote} />
           <SaveButton onClick={this.handleSave} />
         </div>
         <div className="note-list">
