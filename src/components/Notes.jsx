@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Note from "./Note";
 import AddNoteButton from "./AddNoteButton";
+import SaveButton from "./SaveButton";
 import {
   getNotes,
   addNote,
   deleteNote,
   saveNotes
 } from "../services/noteService";
-import SaveButton from "./SaveButton";
 
 class Notes extends Component {
   state = {
