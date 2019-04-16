@@ -32,6 +32,7 @@ main {
 }
 
 .menu {
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +50,6 @@ main {
   border: solid 1px #333;
   border-radius: 10px;
 }
-
 .note textarea {
   width: 250px;
   height: 200px;
@@ -68,6 +68,7 @@ main {
   width: 200px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .btn-add-text {
   padding-left: 15px;
