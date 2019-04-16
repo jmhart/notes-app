@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import Note from "./Note";
 import AddNoteButton from "./AddNoteButton";
-import { getNotes, addNote, deleteNote } from "../services/noteService";
+import {
+  getNotes,
+  addNote,
+  deleteNote,
+  saveNotes
+} from "../services/noteService";
+import SaveButton from "./SaveButton";
 
 class Notes extends Component {
   state = {
@@ -30,12 +36,17 @@ class Notes extends Component {
     this.setState({ notes: getNotes() });
   };
 
+  handleSave = () => {
+    saveNotes(this.state.notes);
+  };
+
   render() {
     const { notes } = this.state;
     return (
       <React.Fragment>
         <div className="btn-add">
           <AddNoteButton click={this.handleAddNote} />
+          <SaveButton onClick={this.handleSave} />
         </div>
         <div className="note-list">
           {notes.map(n => (
