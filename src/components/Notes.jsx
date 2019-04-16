@@ -27,6 +27,7 @@ class Notes extends Component {
     const notes = [...this.state.notes];
     const index = notes.findIndex(n => n.id === id);
     notes[index].text = text;
+    saveNotes(notes);
     this.setState({ notes });
   };
 
