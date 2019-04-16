@@ -45,7 +45,7 @@ class Notes extends Component {
     return (
       <React.Fragment>
         <div className="btn-add">
-          <AddNoteButton click={this.handleAddNote} />
+          <AddNoteButton onClick={this.handleAddNote} />
           <SaveButton onClick={this.handleSave} />
         </div>
         <div className="note-list">

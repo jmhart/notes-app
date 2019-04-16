@@ -1,8 +1,8 @@
 import React from "react";
 
-const AddNoteButton = ({ click }) => {
+const AddNoteButton = ({ onClick }) => {
   return (
-    <button onClick={click} className="btn-add">
+    <button onClick={onClick} className="btn-add">
       Add note
     </button>
   );
