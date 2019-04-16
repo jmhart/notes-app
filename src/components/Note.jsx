@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 const Note = ({ id, title, text, onChange, handleDelete }) => {
   return (
@@ -9,9 +10,7 @@ const Note = ({ id, title, text, onChange, handleDelete }) => {
         value={text}
         onChange={e => onChange(id, e.currentTarget.value)}
       />
-      <div className="bnt-delete">
-        <button onClick={() => handleDelete(id)}>Delete</button>
-      </div>
+      <DeleteButton onClick={() => handleDelete(id)} />
     </div>
   );
 };
