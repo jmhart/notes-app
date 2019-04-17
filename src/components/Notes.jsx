@@ -14,6 +14,9 @@ class Notes extends Component {
   };
 
   componentDidMount() {
+    if (localStorage.getItem("notes") === null) {
+      localStorage.setItem("notes", JSON.stringify(this.state.notes));
+    }
     const notes = getNotes();
     this.setState({ notes });
   }
