@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
-import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
+import CloseButton from "./CloseButton";
 
 class Note extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Note extends Component {
             onClick={this.toggleEdit}
             isEditing={this.state.isEditing}
           />
-          <DeleteButton onClick={() => handleDelete(id)} />
+          <CloseButton onClick={() => handleDelete(id)} />
         </div>
         <div className="note-title">{title}</div>
         {this.state.isEditing && (

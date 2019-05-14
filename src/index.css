@@ -79,3 +79,10 @@ main {
   padding-left: 15px;
   font-size: 2em;
 }
+
+.btn-close {
+  color: #333;
+  float: right;
+  margin-right: 3px;
+  cursor: pointer;
+}
