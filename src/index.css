@@ -95,6 +95,10 @@ main {
 .btn-edit:hover {
   background-color: #4d4d4d;
 }
+.btn-edit:disabled {
+  background-color: rgb(97, 96, 96);
+  color: hsla(0, 0%, 100%, 0.75);
+}
 .btn-close {
   color: #333;
   float: right;
