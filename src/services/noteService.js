@@ -14,7 +14,7 @@ export function addNote() {
     title: "",
     text: ""
   };
-  notes.push(note);
+  notes.unshift(note);
   saveNotes(notes);
 }
 
