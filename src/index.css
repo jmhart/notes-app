@@ -52,7 +52,8 @@ main {
   border-radius: 10px;
 }
 .note textarea {
-  width: 100%;
+  margin-top: 5px;
+  width: 99%;
   height: 250px;
   outline: none;
   resize: none;
@@ -67,19 +68,33 @@ main {
   display: flex;
   color: #fff;
   background-color: #333;
-  border: none;
+  border: 1px solid rgba(27, 31, 35, 0.2);
   padding: 15px;
   width: 200px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 0.5em;
+}
+.btn-add:hover {
+  background-color: #4d4d4d;
 }
 .btn-add-text {
   padding-left: 15px;
   font-size: 2em;
 }
-
+.btn-edit {
+  font-family: inherit;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid rgba(27, 31, 35, 0.2);
+  border-radius: 0.25em;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  background-color: #4d4d4d;
+}
 .btn-close {
   color: #333;
   float: right;
