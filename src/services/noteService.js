@@ -7,7 +7,7 @@ export function addNote() {
   const notes = getNotes();
   let id = 1;
   if (notes.length) {
-    id = notes[notes.length - 1].id + 1;
+    id = notes[0].id + 1;
   }
   const note = {
     id: id,
