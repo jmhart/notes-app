@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import DeleteButton from "./DeleteButton";
-import SaveButton from "./SaveButton";
 import EditButton from "./EditButton";
 
 class Note extends Component {
   constructor(props) {
     super(props);
-    this.state = { isEditing: true };
+    this.state = { isEditing: false };
+  }
+
+  componentDidMount() {
+    if (!this.props.text) {
+      this.setState({ isEditing: true });
+    }
   }
 
   toggleEdit = () => {
@@ -20,6 +25,7 @@ class Note extends Component {
       <div className="note">
         <div className="note-buttons">
           <EditButton
+            disabled={!text}
             onClick={this.toggleEdit}
             isEditing={this.state.isEditing}
           />

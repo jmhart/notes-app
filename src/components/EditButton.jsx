@@ -1,8 +1,10 @@
 import React from "react";
 
-const EditButton = ({ onClick, isEditing }) => {
+const EditButton = ({ disabled, onClick, isEditing }) => {
   return (
-    <button onClick={onClick}>{isEditing ? "Save note" : "Edit note"}</button>
+    <button disabled={disabled} onClick={onClick}>
+      {isEditing ? "Save note" : "Edit note"}
+    </button>
   );
 };
 
